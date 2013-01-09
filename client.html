@@ -14,7 +14,7 @@
     </script>
 
     <script>
-      var socket = io.connect('http://localhost:5000');
+      var socket = io.connect('http://localhost:');
 
       socket.on('broadcast_msg', function(data) {
         console.log('Get broadcasted msg: ', data);

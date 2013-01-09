@@ -6,7 +6,6 @@ var port = process.env.PORT || 5000;
 app.listen(port);
 
 function handler(req, res) {
-  console.log(__dirname);
   fs.readFile( __dirname + '/client.html',
     function(err, data) {
       if (err) {
