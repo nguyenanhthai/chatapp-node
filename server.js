@@ -2,7 +2,10 @@ var app = require('http').createServer(handler)
 , fs = require('fs')
 , io = require('socket.io').listen(app);
 
-app.listen(7777);
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+});
 
 function handler(req, res) {
   console.log(__dirname);
